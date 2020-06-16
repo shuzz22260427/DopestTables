@@ -3,7 +3,7 @@
       <mat-toolbar class="toolbar">
         <mat-card-title>Contact List</mat-card-title>
         <span class="toolbar-spacer"></span>
-        <!--<mat-icon (click)="addContact()">add</mat-icon>-->
+        <mat-icon (click)="addContact()">add</mat-icon>
       </mat-toolbar>
     </mat-card-header>
   
@@ -18,8 +18,8 @@
           <tbody>
           <tr *ngFor="let item of prueba">
             <td *ngFor="let list of item | keys">{{item[list]}}</td>
-            <!--<td><mat-icon (click)="editContact(item.id)">edit</mat-icon></td>
-            <td><mat-icon (click)="deleteContact(item.id)">delete</mat-icon></td>-->
+            <td><mat-icon (click)="editContact()">edit</mat-icon></td>
+            <td><mat-icon (click)="deleteContact()">delete</mat-icon></td>
           </tr>
           </tbody>
         </table>

@@ -22,7 +22,14 @@ export class PopUpTableComponent implements OnInit {
     this.dialogRef.close();
    }
 
-  ngOnInit(): void {
-  }
+   ngOnInit() {
+    this._contactForm = this._formBuilder.group({
+      ID: [this.data.ID],
+      Brand: [ this.data.Brand, [Validators.required]],
+      Name: [ this.data.Name, [Validators.required]],
+      Category: [ this.data.Category, [Validators.required]],
+      Description: [ this.data.Description , [Validators.required]],
 
+    });
+  }
 }
